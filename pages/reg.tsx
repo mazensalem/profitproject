@@ -5,6 +5,7 @@ import { useReducer } from "react";
 import State from "../classes/regstate";
 import Action from "../classes/action";
 import checkepassword from "../functions/CheckPassword";
+import route from "next/router";
 
 enum actions {
   "isemailtaked",
@@ -61,6 +62,7 @@ export default function reg() {
           password: hpassword.toString(),
         }),
       });
+      route.push(`/sendmail?email=${email}`);
     } else {
       alert("you must enter valid values");
     }
