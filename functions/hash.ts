@@ -1,4 +1,4 @@
-function stringToHash(string: string) {
+export default function stringToHash(string: string) {
   var hash = 0;
 
   if (string.length == 0) return hash;
