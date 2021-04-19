@@ -8,10 +8,16 @@ datasource db {
 }
 
 model User {
-  id       Int    @id @default(autoincrement())
-  email    String @unique
+  id       Int     @id @default(autoincrement())
+  email    String  @unique
   password String
   username String
-  isValid   Boolean
-  code      Int
+  isValid  Boolean
+  code     Int
+}
+
+model ForgetPasswordtoken {
+  id        Int    @id @default(autoincrement())
+  userid    Int
+  useremail String
 }
