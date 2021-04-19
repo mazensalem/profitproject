@@ -21,3 +21,9 @@ model ForgetPasswordtoken {
   userid    Int
   useremail String
 }
+
+model Session {
+  id     Int    @id @default(autoincrement())
+  userid Int    @unique
+  jwt    String
+}
